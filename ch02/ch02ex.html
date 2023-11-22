@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2장연습</title>
+  <style>
+    td{
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h2 id="tbl1">표만들기</h2> 
+  <hr>
+  <table border="1">
+      <caption>연락처</caption>
+      <tbody>
+          <tr><td>홍길동</td>
+          <td>010-111-1111</td>
+          <td><img src = "../../media/Elvis.jpg" width="50"></td></tr> 
+          <tr><td>철수</td><td>010-222-2222</td></tr>    
+      </tbody>
+      <thead>
+        <tr><th>이름</th><th>연락처</th><th>사진</th></tr>        
+      </thead>
+  </table>
+  <h2>모양이 이상한 표</h2>
+  <table border="1">
+    <tr><td colspan="3">1</td></tr>
+    <tr><td rowspan="2">4</td><td>5</td><td>6</td></tr>
+    <tr><td>8</td><td>9</td></tr>
+  </table>
+  <h2>하이퍼링크 만들기</h2>
+  <ul>
+    <li><a href="http://www.jnu.ac.kr" target="_blank">전남대</a></li> 
+    <li><a href="http://www.snu.ac.kr">서울대</a></li>
+    <li><a href="#tbl1">표1로가기</a></li>
+    <li><a href="../../media/Elvis.jpg" download>엘비스 이미지</a></li>
+  </ul>
+  <h2>인라인 프레임</h2>
+  <hr>
+  <iframe src="./linklist.html" width="300" height="300"></iframe>
+  <iframe name = "rightframe" width="300" height="300"></iframe>
+</body>
+</body>
+</html>

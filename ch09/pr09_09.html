@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div.detail{
+            width: 150px;
+            background-color: lightskyblue;
+            display: none;
+            position: absolute;
+        }
+    </style>
+    <script>
+        function showDetails(e, dID){
+            let div=document.querySelector(`div#${dID}`);
+            //console.log(div.innerHTML);
+            div.style.display='inline-block';
+            div.style.top=e.clientY+'px';
+            div.style.left=e.clientX+'px';
+        }
+        function hideDetails(e, dID){
+            let div=document.querySelector(`div#${dID}`);
+            div.style.display='none';
+
+        }
+    </script>
+</head>
+<body>
+    <h2>아이템에 마우스를 올리면 설명 출력</h2>
+    <hr>
+    <p>
+        여름 방학에 하고 싶은 것들
+    </p>
+    <ul>
+        <li onmouseover="showDetails(event,'bike')"
+            onmouseout="hideDetails(event,'bike')">
+            자전거로 대한민국 일주
+        </li>
+        <li onmouseover="showDetails(event,'book')"
+            onmouseout="hideDetails(event,'book')">
+            책 100권 읽기
+        </li>
+        <li onmouseover="showDetails(event,'iron')"
+            onmouseout="hideDetails(event,'iron')">
+            철인 3종 경기 완주하기
+        </li>
+    </ul>
+    <div class="detail" id="bike">
+        빨간 자전거를 타고 서울, 대전, 부산 찍고
+        목포, 인천을 거쳐 달린다
+    </div>
+    <div class="detail" id="book">
+        돈 많이 벌고 취직 잘하는 방법에 대한 책을 
+        100권 구해서 읽어서 성공한다
+    </div>
+    <div class="detail" id="iron">
+        마라톤 10킬로미터 뛰고 수영은 4킬로미터 자유형으로
+        하고 사격을 합니다
+    </div>
+</body>
+</html>

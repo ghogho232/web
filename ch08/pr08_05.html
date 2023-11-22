@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zIndex</title>
+    <style>
+        div{
+            position: absolute;
+        }
+        img{
+            position: absolute;
+            top: 20px;
+            left: 10px;
+        }
+    </style>
+    <script>
+        let zs=[0,1,2,3];
+        function changeZindex(){
+            for(let i=0; i<zs.length; i++){
+                zs[i]=(zs[i]+1)%4;
+            }
+            let imgs=document.querySelectorAll('img');
+            for(let i=0;i<imgs.length;i++){
+                imgs[i].style.zIndex=zs[i];
+            }
+        }
+    </script>
+</head>
+<body>
+    <h3>z-index 스타일 프로퍼티</h3>
+    <hr>
+    <div>
+        <img src="../../(수정판)명품 웹프로그래밍 정답 소스 2018.1.9/practice8/media/spade-A.png" onclick ="changeZindex()" width="100" height="140" alt="spade-A">
+        <img src="../../(수정판)명품 웹프로그래밍 정답 소스 2018.1.9/practice8/media/spade-2.png" onclick ="changeZindex()" width="100" height="140" alt="spade-2">
+        <img src="../../(수정판)명품 웹프로그래밍 정답 소스 2018.1.9/practice8/media/spade-3.png" onclick ="changeZindex()" width="100" height="140" alt="spade-3">
+        <img src="../../(수정판)명품 웹프로그래밍 정답 소스 2018.1.9/practice8/media/spade-7.png" onclick ="changeZindex()" width="100" height="140" alt="spade-7">
+    </div>
+</body>
+</html>

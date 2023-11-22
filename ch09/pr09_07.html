@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onmouseover = function(e){
+            if(e.target.tagName.trim().toLowerCase() == 'span'){ 
+                e.target.style.textDecoration='underline';
+            }
+        }
+        window.onmouseout = function(e){
+            if(e.target.tagName == 'SPAN'){
+                e.target.style.textDecoration='none';
+            }
+        }
+    </script>
+</head>
+<body>
+    <h3>span 태그에서만 onmouseover/onmouseout</h3>
+    <hr>
+    <p>
+        span 태그에서만 <span>마우스</span>가 올라갈 때
+        밑줄이 그어지고 <span>마우스</span>가 내려갈 때
+        밑줄이 사라지도록 <span>자바스크립트 코드</span>를 작성한다.
+    </p>
+    <script>
+        //let spans=document.querySelectorAll('span');
+        //for(let span of spans){
+            //span.onmouseover=()=>{span.style.textDecoration='underline'};
+            //span.onmouseout=()=>{span.style.textDecoration='none'};
+        //}
+    </script>
+</body>
+</html>

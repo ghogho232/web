@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function setRandomBGC(){
+            /*
+            let r=Math.floor(Math.random()*256);
+            let g=Math.floor(Math.random()*256);
+            let b=Math.floor(Math.random()*256);
+            document.body.style.backgroundColor=`rgb(${r},${g},${b});`
+            */
+            let ccode='#';
+            for(let i=0; i<6; i++){
+                ccode+=(Math.floor(Math.random()*16)).toString(16);
+            }
+            document.body.style.backgroundColor=ccode;
+        }
+    </script>
+</head>
+<body>
+    <h2>바탕 아무 곳이나 더블크릭</h2>
+    <hr>
+    <p>
+        아무 곳이나 더블 클릭하면 바탕색이 랜덤으로 변합니다.
+    </p>
+    <script>
+        document.ondblclick=setRandomBGC;
+    </script>
+</body>
+</html>

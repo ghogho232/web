@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform</title>
+    <style>
+        img{
+            margin-left: 50px;
+        }
+    </style>
+    <script>
+        let curDeg=0;
+        function rotate(obj){
+            curDeg=(curDeg+90)%360;
+            //obj.style.transform='rotate('+curDeg+'deg)';
+            obj.style.transform=`rotate(${curDeg}deg)`;
+        }
+    </script>
+</head>
+<body>
+    <h3>클릭하면 90&deg; 회전합니다.</h3>
+    <hr>
+    <img src="../../(수정판)명품 웹프로그래밍 정답 소스 2018.1.9/practice8/media/spongebob.png"width=150px height="150px"
+    onclick="rotate(this)">
+</body>
+</html>

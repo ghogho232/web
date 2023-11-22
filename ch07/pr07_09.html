@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>book 객체 만들기</h2>
+    <hr>
+    <script>
+        let b1 = {
+            title:'HTML5',
+            author:'kitae',
+            price:20000,
+            toString:function(){
+                return `${this.title}, ${this.author}, ${this.price}`;
+            }
+        };
+        document.write("book: "+b1.toString());
+        document.write("<hr>");
+        let b2 = new Object();
+        b2.title = 'HTML4';
+        b2.author = 'wonsun';
+        b2.price = 30000;
+        b2.toString=function(){
+            return `${this.title}, ${this.author}, ${this.price}`;
+        }
+        document.write("book2: "+b2.toString());
+        document.write("<hr>");
+        
+        function Book(title,author,price){
+            this.title = title;
+            this.author = author;
+            this.price = price;
+            Book.prototype.toString = function(){
+                return `${this.title}, ${this.author}, ${this.price}`;
+            }
+        }
+        let b4 = new Book('HTML3', 'hwang', 45000);
+        document.write("book4: "+b4.toString());
+        document.write("<hr>");
+        class Book2{
+            constructor (title, author, price) {
+                this.title = title;
+                this.author = author;
+                this.price = price;
+            }
+            toString(){
+                return `${this.title}, ${this.author}, ${this.price}`;
+            }
+        }
+        let b5 = new Book2('HTML6', 'park', 20000);
+        document.write("book5: "+b5.toString());
+    </script>
+</body>
+</html>

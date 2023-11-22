@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span {
+            display: inline-block;
+            width: 150px;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h2>16개의 랜덤한 색 만들기</h2>
+    <hr>
+    <script>
+        let colornames= new Array;
+        for(let i = 0; i < 16; i++){
+            let r = Math.floor(Math.random()*255);
+            let g = Math.floor(Math.random()*255);
+            let b = Math.floor(Math.random()*255);
+            colornames[i] = `rgb(${r},${g},${b})`;
+        }
+
+        for(let color of colornames){
+            //let sstr = "<span style='background-color:" +color+ "'>" + color + "</span>";
+            sstr = `<span style='background-color:${color}'>${color}</span>`
+            document.write(sstr);
+        }
+        
+    </script>
+</body>
+</html>

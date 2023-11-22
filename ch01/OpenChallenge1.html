@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang = "ko">
+<head>
+    <title>나의 소개</title>
+    <meta charset = "UTF-8">
+    <style>
+        body{
+
+            background-color: rgb(194, 139, 210);
+        }
+        h3{
+            color: blue;
+            text-align: center;
+        }
+        hr{
+            height: 5px;
+            background-color: gray;
+            border : gray
+        }
+    </style>
+    <script>
+        function show(){
+            let path = document.getElementById("myphoto");
+            path.src = "../media/me.png";
+        }
+        function hide(){
+            let path = document.getElementById("myphoto");
+            path.src = "";
+        }
+    </script>
+</head>
+<body>
+    <h3 onmouseover = "show()" onmouseleave = "hide()">전강현</h3>
+    <hr>
+    <img id = "myphoto" src = "" width="300" ><br>
+    저는 현재 소프트웨어 공학을 전공하는 학생입니다.<br>
+    현재 3학년 2학기 중에 있으며 여러 전공과목을 배웠고 앞으로도 계속 공부하고 배울 예정입니다.<br>
+    지금까지 배웠던 것 중에 가장 어려웠던 과목은 컴퓨터구조였고
+    가장 할만 하다고 느꼈던 과목은 소프트웨어공학론이었습니다.<br>
+    하지만 이번 학기에 실습과목이 몇개 있어서 이번 학기가 지나면 재밌다고 느끼는 과목이 바뀔 수도 있을 것 같습니다.<br>
+    개인적으로 웹 프로그래밍에 대해 가지고 있는 생각은 복잡하다 였습니다.<br>
+    물론 html, css, javascript만으로 프로그래밍 하는 것은 그리 복잡할 게 없을 수도 있습니다.<br>
+    하지만 요즘 웹시장이 매우 커짐에 따라 프론트엔드와 백엔드 둘 다 라이브러리나 프레임워크가 계속 늘어나고있고<br>
+    그에 따라 공부할 게 많아졌다고 생각하게 됐습니다.<br>
+    물론, 한가지를 선택해서 깊게 파는 것이 좋다고 생각하지만 뭔가 새로운게 나왔는데 그걸 내가 모른다면 뒤처진다는 느낌이 계속 공부하려 하는 것 같습니다.<br>
+    이런 각오로 웹프로그래밍을 제대로 공부하겠습니다.
+</body>
+</html>

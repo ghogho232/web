@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>갬블링 게임</title>
+    <style>
+        table {
+            font-size: 50px;
+            font-weight: bold;
+            font-family: serif;
+            color: blue;
+            border: 3px solid purple;
+            background-color: pink;
+        }
+        th {
+            padding: 5px;
+        }
+        p {
+            color: purple;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>갬블링 게임</h3>
+    각 숫자를 클릭하면 0에서 2사이의 난수로 바뀝니다. 모두 같은 수가 나오면 승리합니다.
+    <hr>
+    <table>
+        <tr>
+            <th id="a" onclick="update(this)">0</th>
+            <th id="b" onclick="update(this)">0</th>
+            <th id="c" onclick="update(this)">0</th>
+        </tr>
+    </table>
+    <p id="result" onclick="reset()"></p>
+    <script>
+        let cnt = 0;
+        let txt = document.getElementById('result');
+
+        function update(element) {
+            element.innerHTML = Math.floor(Math.random() * 3);
+            cnt++;
+        
+            if(cnt == 3){
+                let nums = document.querySelectorAll('th');
+                if(nums[0].innerHTML == nums[1].innerHTML  && nums[1].innerHTML  == nums[2].innerHTML ){
+                    txt.innerHTML = "Success(click here to do again)";
+                }
+                else{
+                    txt.innerHTML = "fail(click here to do again)";
+                }
+            }
+        }
+        function reset(){
+            let nums = document.querySelectorAll('th');
+            for(let i = 0; i < nums.length; i++){
+                nums[i].innerHTML = 0;
+            }
+            txt.innerHTML = "";
+            cnt = 0;
+        }
+    </script>
+</body>
+
+</html>

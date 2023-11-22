@@ -1,0 +1,16 @@
+body {
+    background-color: aliceblue;
+    font-family: "휴먼편지체";
+}
+
+h2 {
+    color: brown;
+    text-align: center;
+}
+div{
+    background-color: pink;
+}
+span{
+    color: blue;
+    font-weight: 500;
+}
