@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마우스 클릭 연습</title>
+    <style>
+        td{
+            border: 3px solid blue;
+            width: 60px;
+            height: 60px;
+        }
+        table{
+            border-collapse: collapse;
+        }
+    </style>
+
+</head>
+<body onload = "Image()">
+    <h3>마우스 클릭 연습</h3>
+    <hr>
+    <table>
+
+    </table>
+    <script>
+        let table = document.querySelector('table');
+        let image = "<img src=''>";
+        for(let i = 0; i < 10; i++){
+            table.innerHTML += `<tr><td>${image}</td><td>${image}</td><td>${image}</td><td>${image}</td><td>${image}</td><td>${image}</td>
+                <td>${image}</td><td>${image}</td><td>${image}</td><td>${image}</td></tr>`;
+        }
+        let a = Math.floor(Math.random()*100);
+        function Image(){
+            document.images[a].src="apple.png";
+            for(var i = 0; i < 100; i++) { 
+                document.images[i].onclick = move;
+            }
+            move();    
+        }
+        function move(){
+            document.images[a].src="";
+            a = Math.floor(Math.random()*100);
+            document.images[a].src="apple.png";
+        }
+    </script>
+</body>
+</html>
