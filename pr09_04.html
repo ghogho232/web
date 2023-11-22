@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onmousemove</title>
+    <style>
+        div{
+            position: absolute;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <h3>이미지 커서 만들기</h3>
+    <hr>
+    마우스를 움직이면 이미지로 만든 커서가 마우스를 따라다닙니다
+    <div><img src="spongebob.png" width="30px"height="30px"></div>
+    <script>
+        document.onmousemove = function mouse(e){
+            let cursor = document.querySelector('div');
+            cursor.style.left = e.x+"px";
+            cursor.style.top = e.y+"px";
+        };
+    </script>
+</body>
+</html>
