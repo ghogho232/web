@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #clock{
+            display: inline-block;
+            width: 200px;
+            background-color: lightskyblue;
+            border: 1px solid darkgray;
+        }
+    </style>
+</head>
+<body>
+    <h2>div에 시계 만들기</h2>
+    <hr>
+    <div id="clock"></div>
+    <script>
+        let div=document.querySelector('#clock');
+        let timerID;
+        function showClock(){
+            let now = new Date();
+            div.innerHTML = now.toLocaleTimeString();
+            //timerID=setTimeout("showClock()",1000);         
+        }
+        timerID=setInterval("showClock(),1000");
+        let stop = false;
+        div.onclick=function(){
+            if(stop == false){
+                div.style.color = 'gray';
+                clearInterval(timerID);
+                stop = true;        
+            }
+            else{
+                div.style.color = 'black';
+                showClock();
+                timerID=setInterval("showClock(),1000");
+                stop = false;
+            }
+        }
+    </script>
+</body>
+</html>
