@@ -6,7 +6,6 @@ const fileUploader=require('express-fileupload');
 
 const newPostConstroller=require('./controllers/newPost');
 const homeController=require('./controllers/home');
-const storePostController=require('./controllers/postStore');
 const postStoreController = require('./controllers/postStore');
 const postController=require('./controllers/post');
 const validMiddleware=require('./middleware/validMiddleware');
@@ -18,7 +17,7 @@ app.use(express.static('./public/'));
 app.use(express.urlencoded({extended:true})); //body,title등
 app.set('view engine','ejs');
 app.use(fileUploader()); //files객체 만들기
-app.use("/post/store", formValidMW);
+app.use("/post/store", validMiddleware);
 
 app.get('/', homeController);
 // app.get('/about',(req,res)=>{
